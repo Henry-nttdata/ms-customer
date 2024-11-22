@@ -1,0 +1,41 @@
+
+#spring:
+#  application:
+#    name: ms-product
+#  config:
+#    import: configserver:http://localhost:8086
+#  profiles:
+#    active: default
+
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      enabled: false
+      import-check:
+        enabled: false
+  application:
+    name: ms-product
+  data:
+    mongodb:
+      #uri: ${MONGODB_URI} #mongodb+srv://clusterdb:W91Mcy7LSXRn1w8U@mongodb101.bldukdv.mongodb.net/dbcustomer
+      uri: mongodb+srv://clusterdb:4QD4r4KcW6mH0iGj@nttdata.mh75p.mongodb.net/dbcustomer
+openapi:
+  info:
+    github:
+      url: https://github.com/Henry-nttdata/Proyecto01
+    terms: http://swagger.io
+    contact:
+      name: Henry David Diaz Enciso
+      email: hdde.141210@gmail.com
+      url: https://www.linkedin.com
+    servers:
+      url: http://localhost:8080
+      description: Local server Swagger
+
+springdoc:
+  swagger-ui:
+    #    enabled: true
+    path: index.html
